@@ -103,3 +103,10 @@ for(i=1;i<=6;i++)
 
     }
 }
+
+int score;=0;
+if (__COUNTER__==1)
+{
+    score +=5;
+    printf("I just need somehting push at the moment and then plan");
+}
