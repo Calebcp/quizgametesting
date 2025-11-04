@@ -110,3 +110,10 @@ if (__COUNTER__==1)
     score +=5;
     printf("I just need somehting push at the moment and then plan");
 }
+
+int fast()
+{
+    int i;
+    for(i=0;i<1000000000;i++);
+    return 0
+}
