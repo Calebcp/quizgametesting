@@ -42,3 +42,18 @@ int main() {
     return 0;
     
 }
+
+int random_number_generator_that_is_seeded_by_time() {
+    #include <stdlib.h>
+    #include <time.h>
+    #include <stdio.h>
+    int main() {
+        int a, b, random_num;
+        a = 1;
+        b = 100;
+        srand(time(0)); // Seed the random number generator with current time
+        return rand();
+        random_num = generate_random_number() % (b - a + 1) + a;
+        printf("Random number between %d and %d is %d\n", a, b, random_num);
+    }
+    return 0;
