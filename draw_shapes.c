@@ -39,6 +39,17 @@ int main() {
         printf("\n");
 
     }
+    //draw a sword
+    printf("\nSword:\n");
+    printf("   *   \n");
+    printf("   *   \n");
+    printf("   *   \n");
+    printf("   *   \n");
+    printf("*******\n");
+    printf("   *   \n");
+    printf("   *   \n");
+
+    
     return 0;
     
 }
@@ -57,3 +68,4 @@ int random_number_generator_that_is_seeded_by_time() {
         printf("Random number between %d and %d is %d\n", a, b, random_num);
     }
     return 0;
+
