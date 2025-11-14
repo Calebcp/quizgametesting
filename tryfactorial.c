@@ -112,8 +112,26 @@ int main(){
 	return 0;
 }
 
+/*i need to have more time tomorrow, but my my math homework*/
 
+#include <stdio.h>
 
+/*for factorial practice*/
+
+/*calculate sum of first n terms*/
+int main(){
+	int N; 
+	int sum;
+	printf("Input number you want to calculate the sum of the first N even terms: ");
+	scanf("%d", &N);
+	for (int i = 0;  i<=N;i++){
+		
+		int sum = N+1;
+		
+	}
+	printf("The sum is %d", &sum);
+	return 0;
+}
 
 
 
