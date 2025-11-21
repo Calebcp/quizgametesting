@@ -19,6 +19,10 @@ int main()
 			break;
 		}
 	}
+    if (ispopular ==0)
+    printf("%s is not a popular name in the USA \n", name);
+    else
+
 	printf("%s is a popular name in the USA \n", name);
 	return 0;
 	
