@@ -15,7 +15,10 @@ int main()
 	}else{
 		printf("The number %d is the largest!", c);
 	}
-	
+	printf("ANd here below lets count to ten for fun!\n");
+    for (int i = 0; i <= 10; i++){
+		printf("%d\n", i);
+	}
 	return 0;
 }
 
