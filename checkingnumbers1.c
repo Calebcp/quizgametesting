@@ -19,6 +19,19 @@ int main()
     for (int i = 0; i <= 10; i++){
 		printf("%d\n", i);
 	}
+
+    printf("And here is an array sum problem too!\n");
+    #include <stdio.h>
+
+	int arr[5] = {1, 2, 3, 4, 5};
+	int sum = 0;
+	
+	for (int i = 0; i < 5; i++)
+	sum += arr[i];
+	
+	printf("The sum of the array elements %d %d %d %d %d \n", arr[0], arr[1], arr[2], arr[3], arr[4]);
+	printf("Sum = %d\n", sum);
+	
 	return 0;
 }
 
