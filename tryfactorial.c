@@ -1,4 +1,27 @@
+/*FInally! i got it, and this time ill be faster with learning!!*/
+
 #include <stdio.h>
+
+int main()
+{
+	int num; 
+	int factorial = 1;
+	
+	printf("Enter the number you want to find factorial of: ");
+	scanf("%d", &num);
+	
+	if (num < 0){
+		printf("Error, Negatives undefine for Factorials");
+	}else{
+		for(int i = 1; i <= num; i++){
+			factorial *= i;
+		}
+		printf("The factorial of %d is: %d!", num, factorial);
+	}
+	return 0; 
+}
+
+/*#include <stdio.h>
 
 int main(){
 	int n;
@@ -132,7 +155,7 @@ int main(){
 	printf("The sum is %d", &sum);
 	return 0;
 }
-
+*/
 
 
 
