@@ -12,6 +12,7 @@ int main()
 	
 	printf("The area of the room is %.2f square feet.\n", area);
 	
+    printf("Do you want to calculate another room? (y/n): \n");
 	return 0;
 }
 
