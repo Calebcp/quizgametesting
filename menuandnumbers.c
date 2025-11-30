@@ -15,6 +15,42 @@ int main()
 	return 0;
 }
 
+#include <stdio.h>
+
+int main()
+{
+	while (1)
+	{
+		int a, b, c, min, mid, max;
+	
+	printf("Enter three numbers, and automatically have them sorted from smallest to largest: \n");
+	
+	printf("Enter the first number: \n");
+	scanf("%d", &a);
+	
+	printf("Enter the second number: \n");
+	scanf("%d", &b);
+	
+	printf("Enter the third number: \n");
+	scanf("%d", &c);
+	
+	min = a < b ? (a < c ? a : c) : (b < c ? b : c);
+	
+	max = a > b ? (a > c ? a : c) : (b > c ? b : c);
+	
+	mid = a + b + c - min - max;
+	
+	printf("%d %d %d\n\n", min, mid, max);
+	
+	char again;
+	printf("Press a key and enter for another round or n to quit: \n");
+	scanf(" %c", &again);
+	if (again == 'n' || again == 'N') break;
+	}
+	
+	return 0;
+	
+}
 
 
 
