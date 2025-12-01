@@ -79,3 +79,23 @@ int main()
 	}
 	return 0;
 }
+
+#include <stdio.h>
+
+int main()
+{
+	int a, b, sum;
+	
+	printf("Input two integers with comma in between to get their sum: \n");
+	scanf("%d, %d", &a, &b);
+	
+	sum = a + b;
+	
+	if (a < 0 || b < 0 || a + b < 0)
+	{
+		printf("(%d) + (%d) = (%d)", a, b, sum);
+	}else{
+		printf("%d + %d = %d", a, b, sum);
+	}
+	return 0;
+}
