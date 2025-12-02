@@ -99,3 +99,44 @@ int main()
 	}
 	return 0;
 }
+
+//more exercises
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c;
+	
+	printf("Enter the size of each of your Triangles sides: \n");
+	printf("Enter First Side: ");
+	if (scanf("%d", &a) !=1)
+	{
+		printf("Error, must be a number!");
+		return 1;
+	}
+
+	printf("Enter Second Side: ");
+	if (scanf("%d", & b) !=1)
+	{
+		printf("Error, must be a number!");
+		return 1;
+	}
+
+	printf("Enter Third Side: ");
+	if (scanf("%d", &c) !=1)
+	{
+		printf("Error, must be a number!");
+		return 1;
+	}
+	
+	if (a == b && b == c)
+	{
+	  printf("That's an Equilateral Triangle!");
+	}else if ( a == b || b == c || c == a){
+		printf("That's a Isoceles Triangle!");
+	}else {
+		printf("That's a Scalene Triangle!");
+	}
+	
+	return 0;
+}
