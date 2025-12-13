@@ -49,6 +49,13 @@ int main() {
 		}
 		
 	}
+
 }
+	int final_guess;
+	printf("The correct number was %d\n", random_number);
+	
+
+
+
 	return 0;
 }
