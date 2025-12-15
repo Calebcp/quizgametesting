@@ -59,3 +59,71 @@ int main() {
 
 	return 0;
 }
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+    char input[1000], num_part[1000], exp_sign[2], exp_num[100];
+    char integer_part[1000], decimal_part[1000];
+    int exp, int_len, dec_len, total_len, shift;
+    int i, j, k;
+
+    fgets(input, sizeof(input), stdin);
+    sscanf(input, "%s %*c %s %s", num_part, exp_sign, exp_num);
+
+    char *dot = strchr(num_part, '.');
+    if (dot) {
+        strncpy(integer_part, num_part, dot - num_part);
+        integer_part[dot - num_part] = '\0';
+        strcpy(decimal_part, dot + 1);
+    } else {
+        strcpy(integer_part, num_part);
+        decimal_part[0] = '\0';
+    }
+
+    exp = atoi(exp_num);
+    if (strcmp(exp_sign, "-") == 0) exp = -exp;
+
+    int_len = strlen(integer_part);
+    dec_len = strlen(decimal_part);
+    shift = int_len - 1 + exp;
+
+    char full_num[10000] = {0};
+    strcat(full_num, integer_part);
+    strcat(full_num, decimal_part);
+    total_len = strlen(full_num);
+
+    char result[10000] = {0};
+    if (shift >= 0) {
+        if (shift + 1 >= total_len) {
+            strcpy(result, full_num);
+            for (i = total_len; i <= shift; i++) strcat(result, "0");
+            strcat(result, ".00000000");
+        } else {
+            strncpy(result, full_num, shift + 1);
+            result[shift + 1] = '.';
+            strcat(result, full_num + shift + 1);
+        }
+    } else {
+        strcpy(result, "0.");
+        for (i = 0; i < -shift - 1; i++) strcat(result, "0");
+        strcat(result, full_num);
+    }
+
+    char *dot_res = strchr(result, '.');
+    char final_int[10000], final_dec[100] = "00000000";
+    if (dot_res) {
+        strncpy(final_int, result, dot_res - result);
+        final_int[dot_res - result] = '\0';
+        strncpy(final_dec, dot_res + 1, 8);
+        final_dec[8] = '\0';
+    } else {
+        strcpy(final_int, result);
+    }
+
+    printf("%s.%s\n", final_int, final_dec);
+
+    return 0;
+}
