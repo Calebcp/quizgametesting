@@ -42,3 +42,13 @@ int main() {
     return 0;  
 }  
 
+int romanToInt(const char *s) {
+    int val = 0, curr, next;
+    while (*s) {
+        curr = (*s == 'M') ? 1000 : (*s == 'D') ? 500 : (*s == 'C') ? 100 : (*s == 'L') ? 50 : (*s == 'X') ? 10 : (*s == 'V') ? 5 : 1;
+        next = (*(s+1)) ? ((*(s+1) == 'M') ? 1000 : (*(s+1) == 'D') ? 500 : (*(s+1) == 'C') ? 100 : (*(s+1) == 'L') ? 50 : (*(s+1) == 'X') ? 10 : (*(s+1) == 'V') ? 5 : 1) : 0;
+        val += (curr < next) ? -curr : curr;
+        s++;
+    }
+    return val;
+}
