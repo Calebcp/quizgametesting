@@ -70,21 +70,7 @@ int main() {
     mid = a + b + c - min - max;  
   
     printf("The numbers in sorted order are: %d %d %d.\n", min, mid, max);  
-  printf("Enter the second number: \n");  
-    if (scanf("%d", &b) != 1) {  
-        printf("Invalid input!\n");  
-        return 1;  
-    }  
   
-    printf("Enter the third number: \n");  
-    if (scanf("%d", &c) != 1) {  
-        printf("Invalid input!\n");  
-        return 1;  
-    }  
-  
-    min = (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);  
-    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);  
-    mid = a + b + c - min - max;  
     return 0;  
 }
 
