@@ -41,3 +41,36 @@ int main() {
     return 0;  
 }  
 
+#include <stdio.h>  
+  
+int main() {  
+    int a, b, c;  
+    int min, max, mid;  
+  
+    printf("Enter the first number: \n");  
+    if (scanf("%d", &a) != 1) {  
+        printf("Invalid input!\n");  
+        return 1;   
+    }  
+  
+    printf("Enter the second number: \n");  
+    if (scanf("%d", &b) != 1) {  
+        printf("Invalid input!\n");  
+        return 1;  
+    }  
+  
+    printf("Enter the third number: \n");  
+    if (scanf("%d", &c) != 1) {  
+        printf("Invalid input!\n");  
+        return 1;  
+    }  
+  
+    min = (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);  
+    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);  
+    mid = a + b + c - min - max;  
+  
+    printf("The numbers in sorted order are: %d %d %d.\n", min, mid, max);  
+  
+    return 0;  
+}
+
