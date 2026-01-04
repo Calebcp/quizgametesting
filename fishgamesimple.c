@@ -49,6 +49,17 @@ void Input() {
             case 27: gameOver = 1; break;
         }
     }
+    void Logic() {
+    obstacleY++;
+    if (obstacleY >= HEIGHT) {
+        obstacleY = 0;
+        obstacleX = rand() % WIDTH;
+        score++;
+    }
+    if (fishX == obstacleX && fishY == obstacleY) gameOver = 1;
+    if (fishX < 0 || fishX >= WIDTH || fishY < 0 || fishY >= HEIGHT) gameOver = 1;
+    Sleep(50);
+}
 }
 void Logic() {
     obstacleY++;
