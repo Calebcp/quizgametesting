@@ -50,27 +50,7 @@ void Input() {
         }
     }
 }
-
 void Logic() {
     obstacleY++;
-    if (obstacleY >= HEIGHT) {
-        obstacleY = 0;
-        obstacleX = rand() % WIDTH;
-        score++;
-    }
-    if (fishX == obstacleX && fishY == obstacleY) gameOver = 1;
-    if (fishX < 0 || fishX >= WIDTH || fishY < 0 || fishY >= HEIGHT) gameOver = 1;
-    Sleep(50);
-}
-
-int main() {
-    srand(time(0));
-    Setup();
-    while (!gameOver) {
-        Draw();
-        Input();
-        Logic();
-    }
-    printf("Game Over! Final Score: %d\n", score);
     return 0;
 }
