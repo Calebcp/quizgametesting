@@ -60,8 +60,20 @@ void Input() {
     if (fishX < 0 || fishX >= WIDTH || fishY < 0 || fishY >= HEIGHT) gameOver = 1;
     Sleep(50);
 }
+void L(){
+    oy++;
+    if(oy>=H){oy=0;ox=rand()%W;s++;}
+    if(x==ox&&y==oy)go=1;
+    if(x<0||x>=W||y<0||y>=H)go=1;
+    Sleep(70);
+}
 }
 void Logic() {
     obstacleY++;
+    int main(){
+    srand(time(0));
+    ox=rand()%W;
+    while(!go){D();I();L();}
+    printf("Game Over! S:%d\n",s);}
     return 0;
 }
