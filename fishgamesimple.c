@@ -75,5 +75,8 @@ void Logic() {
     ox=rand()%W;
     while(!go){D();I();L();}
     printf("Game Over! S:%d\n",s);}
+
+    int 
+    
     return 0;
 }
