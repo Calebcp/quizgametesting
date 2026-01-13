@@ -24,7 +24,8 @@ int main() {
 	while (pos < n && a[pos] > m)
 		pos++;
 		
-	for (i = n; i > pos; i--)
+	
+        for (i = n; i > pos; i--)
 		a[i] = a[i-1];
 		
 	a[pos] = m;
