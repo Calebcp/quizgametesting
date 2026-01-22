@@ -4,13 +4,16 @@
 #include <time.h>
 
 int main() {
+
+    srand(time(0));
+    int random_idx = rand() % total_colors;
+    char *target_color = colors[random_idx];
+    
     char *colors[] = {"red", "blue", "green", "yellow", "black", "white"};
     int total_colors = 6;
     char guess[20];
     
-    srand(time(0));
-    int random_idx = rand() % total_colors;
-    char *target_color = colors[random_idx];
+    
 
     printf("Guess the color of the bus!\n");
     printf("Possible colors: red, blue, green, yellow, black, white\n");
