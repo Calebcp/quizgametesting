@@ -38,18 +38,22 @@ int main() {
 
         if (strcmp(guess, target_color) == 0) {
             correct = 1;
-            printf("\n🎉 Congratulations! You guessed correctly!\n");
+            printf("\n✅ Great job! You guessed the bus color correctly!\n");
+            printf("The bus was indeed %s!\n", target_color);
         } else {
             attempts--;
             if (attempts > 0) {
-                printf("❌ Wrong! You have %d attempt(s) left.\n", attempts);
+                printf("❌ Oops! Wrong guess. You have %d attempt(s) remaining.\n", attempts);
             }
         }
     }
 
     if (!correct) {
-        printf("\n💥 Game Over! The bus color was %s.\n", target_color);
+        printf("\n❌ Game Over! You've used all your attempts.\n");
+        printf("The correct bus color was: %s\n", target_color);
     }
+    
+    printf("\nThanks for playing the Bus Color Guessing Game! 😊\n");
 
     return 0;
 }
