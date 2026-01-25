@@ -49,11 +49,14 @@ int main() {
     }
 
     if (!correct) {
-        printf("\n❌ Game Over! You've used all your attempts.\n");
-        printf("The correct bus color was: %s\n", target_color);
+        printf("\n💀 Game Over! All attempts used (%d total)\n", attempts_used);
+        printf("🔍 The correct bus color was: %s \n", target);
+        printf("💡 Tip: Try focusing on common bus colors next time!\n");
     }
-    
-    printf("\nThanks for playing the Bus Color Guessing Game! 😊\n");
+
+    printf("\n=========================================\n");
+    printf("      Thanks for playing! See you soon!  \n");
+    printf("=========================================\n");
 
     return 0;
 }
