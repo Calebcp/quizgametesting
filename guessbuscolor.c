@@ -36,14 +36,14 @@ int main() {
             continue;
         }
 
-        if (strcmp(guess, target_color) == 0) {
+        if (strcmp(guess, target) == 0) {
             correct = 1;
-            printf("\n✅ Great job! You guessed the bus color correctly!\n");
-            printf("The bus was indeed %s!\n", target_color);
+            printf("\n🎉 %s You guessed it in %d attempt(s)! \n", praise[rand_praise], attempts_used);
+            printf("🎊 The bus is indeed %s! \n", target);
         } else {
             attempts--;
             if (attempts > 0) {
-                printf("❌ Oops! Wrong guess. You have %d attempt(s) remaining.\n", attempts);
+                printf("⚠️ %s Wrong guess - %d attempt(s) left!\n", encouragement[rand_enc], attempts);
             }
         }
     }
@@ -59,4 +59,6 @@ int main() {
     printf("=========================================\n");
 
     return 0;
+
+    
 }
