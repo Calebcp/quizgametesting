@@ -48,6 +48,7 @@ void spell_word() {
     printf("\n");
 }
 
+
 int main() {
     int choice;
     do {
